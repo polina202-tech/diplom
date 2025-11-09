@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница со списками</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .navigation {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .image-map {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .image-map img {
+            border: none;
+        }
+        .lists {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Страница со списками</h1>
+    
+    <div class="image-map">
+        <!-- Навигатор с картой ссылок -->
+        <img src="1.jpg" alt="Навигация" usemap="#navmap" width="300" height="100">
+        <map name="navmap">
+            <!-- Левая стрелка - назад -->
+            <area shape="rect" coords="0,0,100,100" href="index.html" alt="Назад" title="Назад">
+            <!-- Центральная область - обновление -->
+            <area shape="rect" coords="100,0,200,100" href="lists.html" alt="Обновить" title="Обновить">
+            <!-- Правая стрелка - вперед -->
+            <area shape="rect" coords="200,0,300,100" href="index.html" alt="Далее" title="Далее">
+        </map>
+    </div>
+    
+    <div class="lists">
+        <h2>Примеры списков</h2>
+        
+        <h3>Маркированный список:</h3>
+        <ul>
+            <li>Элемент списка 1</li>
+            <li>Элемент списка 2</li>
+            <li>Элемент списка 3</li>
+        </ul>
+        
+        <h3>Нумерованный список:</h3>
+        <ol>
+            <li>Первый пункт</li>
+            <li>Второй пункт</li>
+            <li>Третий пункт</li>
+        </ol>
+        
+        <h3>Список определений:</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Язык разметки гипертекста</dd>
+            <dt>CSS</dt>
+            <dd>Каскадные таблицы стилей</dd>
+        </dl>
+    </div>
+    
+    <div class="navigation">
+        <!-- Ссылки для навигации -->
+        <a href="index.html">Назад</a> | 
+        <a href="index.html#end" target="_blank">Далее</a>
+    </div>
+    
+    <!-- Якорь для возврата на первую страницу -->
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="index.html#end">Вернуться к концу первой страницы</a>
+    </div>
+</body>
+</html>
