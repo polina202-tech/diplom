@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .navigation {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .anchor-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .image-map {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .image-map img {
+            border: none;
+        }
+        .top-link {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a id="top"></a>
+    <h1>Главная страница</h1>
+    
+    <p>Это первая страница нашего сайта. Здесь представлена основная информация.</p>
+    
+    <div class="image-map">
+        <!-- Навигатор с картой ссылок -->
+        <img src="1.jpg" alt="Навигация" usemap="#navmap" width="300" height="100">
+        <map name="navmap">
+            <!-- Левая стрелка - назад -->
+            <area shape="rect" coords="0,0,100,100" href="index.html" alt="Назад" title="Назад">
+            <!-- Центральная область - обновление -->
+            <area shape="rect" coords="100,0,200,100" href="index.html" alt="Обновить" title="Обновить">
+            <!-- Правая стрелка - вперед -->
+            <area shape="rect" coords="200,0,300,100" href="lists.html" alt="Далее" title="Далее">
+        </map>
+    </div>
+    
+    <p>Текст первой страницы...</p>
+    <p>Много контента для демонстрации якоря...</p>
+    <p>Еще больше текста...</p>
+    
+    <div class="navigation">
+        <!-- Ссылка на следующую страницу в новом окне -->
+        <a href="lists.html" target="_blank">Далее</a>
+    </div>
+    
+    <!-- Якорь для возврата к заголовку -->
+    <div class="anchor-link">
+        <a href="#top">Вернуться к заголовку</a>
+    </div>
+    
+    <!-- Фиксированная ссылка для быстрого возврата наверх -->
+    <a href="#top" class="top-link">↑ Наверх</a>
+</body>
+</html>
