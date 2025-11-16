@@ -1,0 +1,62 @@
+/* 1) Фон страницы - картинка только сверху, повторяется по горизонтали */
+body {
+    background-image: url('background-top.jpg'); /* замените на путь к вашей картинке */
+    background-repeat: repeat-x; /* повторение только по горизонтали */
+    background-position: top; /* расположение сверху */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 2) Изображение в центре web-страницы */
+.centered-image {
+    display: block;
+    margin: 50px auto;
+    max-width: 80%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+/* 3a) Стилевой класс для желтого фона и фонового изображения слева */
+.yellow-background {
+    background-color: yellow;
+    background-image: url('left-background.jpg'); /* замените на путь к вашей картинке */
+    background-repeat: repeat-y; /* повторение сверху вниз */
+    background-position: left;
+    padding: 20px;
+    min-height: 400px;
+    margin: 20px;
+    border: 1px solid #ccc;
+}
+
+/* 3b) Переопределение тега h1 - красный текст с синим фоном */
+h1 {
+    color: red;
+    background-color: blue;
+    padding: 10px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* 3c) Переопределение тега p - зеленый текст */
+p {
+    color: green;
+    line-height: 1.6;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-left: 3px solid darkgreen;
+}
+
+/* Дополнительные стили для улучшения внешнего вида */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 15px;
+}
