@@ -1,0 +1,10 @@
+BODY { 
+background-image : url(ris1.png) ; 
+background-repeat: no-repeat; 
+background-attachment: scroll ; 
+} 
+BODY { 
+background-image : url(ris1.png) ; 
+background-repeat: no-repeat; 
+background-attachment: fixed ; 
+}
