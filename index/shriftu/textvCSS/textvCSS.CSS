@@ -1,0 +1,166 @@
+/* Общие стили страницы */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #444;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+}
+
+.content {
+    margin-top: 30px;
+}
+
+/* 1a) Стилевой класс для нумерованного списка */
+ol.numbered-list {
+    list-style-type: none;
+    padding: 0;
+    counter-reset: my-counter;
+}
+
+ol.numbered-list li {
+    position: relative;
+    padding: 10px 15px 10px 50px;
+    margin-bottom: 10px;
+    background-color: #e8f4f8; /* цвет фона */
+    font-size: 18px; /* размер шрифта 18px */
+    border-radius: 5px;
+    counter-increment: my-counter;
+}
+
+ol.numbered-list li::before {
+    content: counter(my-counter);
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background-image: url('marker.png'); /* замените на путь к вашему изображению */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+}
+
+/* 1b) Разные маркеры для элементов маркированного списка по id */
+ul.marked-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.marked-list li {
+    padding: 8px 15px 8px 35px;
+    margin-bottom: 8px;
+    background-color: #f8f9fa;
+    border-left: 3px solid #ddd;
+}
+
+#marker-circle {
+    list-style-type: circle;
+}
+
+#marker-square {
+    list-style-type: square;
+}
+
+#marker-disc {
+    list-style-type: disc;
+}
+
+#marker-none {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+#marker-circle::before {
+    content: "○";
+    margin-right: 10px;
+    color: #e74c3c;
+}
+
+#marker-square::before {
+    content: "■";
+    margin-right: 10px;
+    color: #2ecc71;
+}
+
+#marker-disc::before {
+    content: "●";
+    margin-right: 10px;
+    color: #3498db;
+}
+
+#marker-none::before {
+    content: "→";
+    margin-right: 10px;
+    color: #f39c12;
+}
+
+/* 1c) Стили для гиперссылок в нумерованном списке */
+ol.numbered-list li a {
+    text-decoration: none;
+    color: #2c3e50;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* 1d) Стиль ссылок при наведении */
+ol.numbered-list li a:hover {
+    color: #e74c3c; /* цвет текста */
+    font-size: 36px; /* размер 36px */
+    text-decoration: none; /* отменить подчеркивание */
+    background-color: #fff3cd; /* цвет фона */
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* 1e) Стили для не посещенных и посещенных гиперссылок */
+/* Не посещенные ссылки */
+ol.numbered-list li a:link {
+    background-color: #d4edda; /* цвет фона для непосещенных */
+}
+
+/* Посещенные ссылки */
+ol.numbered-list li a:visited {
+    background-color: #f8d7da; /* цвет фона для посещенных */
+}
+
+/* Дополнительные стили для демонстрации */
+.additional-links {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.content p {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
