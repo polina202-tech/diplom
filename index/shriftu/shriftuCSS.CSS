@@ -1,0 +1,75 @@
+/* Общие стили для страницы */
+body {
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+h2 {
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+/* 1b) Переопределение тега <b> */
+b {
+    font-weight: bold;
+    color: red;
+    font-size: 24px;
+}
+
+/* 1c) Стилевой класс для третьего предложения */
+.special-text {
+    font-family: Arial, sans-serif;
+    color: #00bfff; /* голубой цвет */
+    font-size: 10px;
+    font-style: italic;
+    background-color: black;
+    padding: 15px;
+    border-radius: 5px;
+    line-height: 1.8;
+}
+
+/* Дополнительные стили для демонстрации */
+.additional-text {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+}
+
+p {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Стили для различных состояний текста */
+.container p:first-of-type {
+    background-color: #e8f4f8;
+    border-left: 4px solid #3498db;
+}
+
+.container p:nth-of-type(2) {
+    background-color: #f9ebea;
+    border-left: 4px solid #e74c3c;
+}
