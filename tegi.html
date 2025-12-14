@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML теги и их происхождение</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .tag-category {
+            margin-bottom: 40px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .category-title {
+            color: #2575fc;
+            border-bottom: 2px solid #2575fc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .tag-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .tag-card {
+            background: #f8f9ff;
+            border-left: 4px solid #6a11cb;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .tag-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .tag-name {
+            font-weight: bold;
+            color: #6a11cb;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .tag-name code {
+            background: #e9ecef;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-right: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .full-form {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            border-left: 2px solid #ddd;
+        }
+        
+        .description {
+            color: #555;
+            margin-top: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        
+        .note {
+            background: #fff8e1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        @media (max-width: 768px) {
+            .tag-list {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HTML теги: расшифровка аббревиатур</h1>
+            <p class="subtitle">От каких английских слов произошли названия HTML-тегов</p>
+        </header>
+        
+        <section class="tag-category">
+            <h2 class="category-title">Основные структурные теги</h2>
+            <div class="tag-list">
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;html&gt;</code> HTML</div>
+                    <div class="full-form"><strong>HyperText Markup Language</strong> — язык гипертекстовой разметки</div>
+                    <div class="description">Корневой элемент HTML-документа</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;head&gt;</code> HEAD</div>
+                    <div class="full-form"><strong>Head</strong> — голова</div>
+                    <div class="description">Секция с мета-информацией о документе</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;body&gt;</code> BODY</div>
+                    <div class="full-form"><strong>Body</strong> — тело</div>
+                    <div class="description">Содержит всё содержимое веб-страницы</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;div&gt;</code> DIV</div>
+                    <div class="full-form"><strong>Division</strong> — раздел, отдел</div>
+                    <div class="description">Универсальный контейнер для группировки элементов</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;span&gt;</code> SPAN</div>
+                    <div class="full-form"><strong>Span</strong> — охват, промежуток</div>
+                    <div class="description">Универсальный контейнер для строчных элементов</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="tag-category">
+            <h2 class="category-title">Теги заголовков и текста</h2>
+            <div class="tag-list">
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;h1&gt;-&lt;h6&gt;</code> H</div>
+                    <div class="full-form"><strong>Heading</strong> — заголовок</div>
+                    <div class="description">Теги заголовков разных уровней (1-6)</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;p&gt;</code> P</div>
+                    <div class="full-form"><strong>Paragraph</strong> — параграф, абзац</div>
+                    <div class="description">Определяет текстовый абзац</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;a&gt;</code> A</div>
+                    <div class="full-form"><strong>Anchor</strong> — якорь, привязка</div>
+                    <div class="description">Создает гиперссылки (якорные ссылки)</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;strong&gt;</code> STRONG</div>
+                    <div class="full-form"><strong>Strong</strong> — сильный, важный</div>
+                    <div class="description">Выделяет важный текст (полужирный)</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;em&gt;</code> EM</div>
+                    <div class="full-form"><strong>Emphasis</strong> — ударение, акцент</div>
+                    <div class="description">Выделяет текст курсивом с семантическим акцентом</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="tag-category">
+            <h2 class="category-title">Списки и таблицы</h2>
+            <div class="tag-list">
+                <div class="tag-card">
+                  <div class="tag-name"><code>&lt;ul&gt;</code> UL</div>
+                    <div class="full-form"><strong>Unordered List</strong> — неупорядоченный список</div>
+                    <div class="description">Маркированный список</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;ol&gt;</code> OL</div>
+                    <div class="full-form"><strong>Ordered List</strong> — упорядоченный список</div>
+                    <div class="description">Нумерованный список</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;li&gt;</code> LI</div>
+                    <div class="full-form"><strong>List Item</strong> — элемент списка</div>
+                    <div class="description">Элемент списка (для ul и ol)</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;table&gt;</code> TABLE</div>
+                    <div class="full-form"><strong>Table</strong> — таблица</div>
+                    <div class="description">Создает таблицу</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;tr&gt;</code> TR</div>
+                    <div class="full-form"><strong>Table Row</strong> — строка таблицы</div>
+                    <div class="description">Создает строку в таблице</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="tag-category">
+            <h2 class="category-title">Мультимедиа и формы</h2>
+            <div class="tag-list">
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;img&gt;</code> IMG</div>
+                    <div class="full-form"><strong>Image</strong> — изображение</div>
+                    <div class="description">Вставляет изображение на страницу</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;video&gt;</code> VIDEO</div>
+                    <div class="full-form"><strong>Video</strong> — видео</div>
+                    <div class="description">Вставляет видео на страницу</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;audio&gt;</code> AUDIO</div>
+                    <div class="full-form"><strong>Audio</strong> — аудио</div>
+                    <div class="description">Вставляет аудио на страницу</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;form&gt;</code> FORM</div>
+                    <div class="full-form"><strong>Form</strong> — форма</div>
+                    <div class="description">Создает форму для ввода данных</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;input&gt;</code> INPUT</div>
+                    <div class="full-form"><strong>Input</strong> — ввод, вводимые данные</div>
+                    <div class="description">Поле ввода данных в форме</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="tag-category">
+            <h2 class="category-title">Мета-теги и скрипты</h2>
+            <div class="tag-list">
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;meta&gt;</code> META</div>
+                    <div class="full-form"><strong>Metadata</strong> — метаданные</div>
+                    <div class="description">Предоставляет метаданные о HTML-документе</div>
+                    </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;link&gt;</code> LINK</div>
+                    <div class="full-form"><strong>Link</strong> — связь, ссылка</div>
+                    <div class="description">Подключает внешние ресурсы (CSS, иконки)</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;script&gt;</code> SCRIPT</div>
+                    <div class="full-form"><strong>Script</strong> — сценарий, скрипт</div>
+                    <div class="description">Подключает или содержит JavaScript-код</div>
+                </div>
+                
+                <div class="tag-card">
+                    <div class="tag-name"><code>&lt;style&gt;</code> STYLE</div>
+                    <div class="full-form"><strong>Style</strong> — стиль</div>
+                    <div class="description">Содержит CSS-стили для документа</div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="note">
+            <p><strong>Интересный факт:</strong> Многие HTML-теги являются аббревиатурами английских слов, что помогает запомнить их назначение. Например, зная, что "DIV" означает "division" (раздел), легче понять, что этот тег используется для разделения контента на логические блоки.</p>
+        </div>
+        
+        <footer>
+            <p>© 2023 Справочник по HTML тегам | Происхождение названий тегов</p>
+            <p>Изучайте веб-разработку с пониманием основ!</p>
+        </footer>
+    </div>
+</body>
+</html>
