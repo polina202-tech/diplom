@@ -369,17 +369,28 @@
 							<p>Примеры использования основных HTML тегов и элементов</p>
 						</div>
 					</a>
+					
+					<a href="https://github.com/polina202-tech/diplom/blob/main/kopiasaita.html" class="link" target="_blank">
+						<div class="link-icon">
+							<i class="fas fa-copy"></i>
+						</div>
+						<div class="link-content">
+							<h3>Копия сайта</h3>
+							<p>HTML страница с копией сайта "Find Your Perfect Room"</p>
+						</div>
+					</a>
+					
+					<!-- НОВЫЙ ПУНКТ: 3D модели кубиков -->
+					<a href="https://github.com/polina202-tech/diplom/blob/main/kopiasaita.html" class="link" target="_blank">
+						<div class="link-icon">
+							<i class="fas fa-cube"></i>
+						</div>
+						<div class="link-content">
+							<h3>3D модели необычных кубиков</h3>
+							<p>Интерактивные 3D модели кубиков, следующие за курсором мыши</p>
+						</div>
+					</a>
 				</div>
-		<div class="links">
-			<a href="https://github.com/polina202-tech/diplom/blob/main/kopiasaita.html" class="link" target="_blank">
-				<div class="link-icon">
-					<i class="fas fa-list"></i>
-				</div>
-				<div class="link-content">
-					<h3>Копия сайта</h3>
-					<p>HTML страница с копией сайта "Find Your Perfect Room" </p>
-				</div>
-			</a>
 			</section>
 
 			<!-- Figma раздел -->
@@ -404,47 +415,53 @@
 					</a>
 				</div>
 			</section>
-			<script>
-				// Анимация появления элементов при загрузке
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.section');
-            const title = document.querySelector('.title');
-            
-            // Анимация заголовка
-            title.style.opacity = '0';
-            title.style.transform = 'translateY(-50px)';
-            
-            setTimeout(() => {
-                title.style.transition = 'opacity 1s ease, transform 1s ease';
-                title.style.opacity = '1';
-                title.style.transform = 'translateY(0)';
-            }, 300);
-            
-            // Анимация секций
-            sections.forEach((section, index) => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(30px)';
-                
-                setTimeout(() => {
-                    section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                    section.style.opacity = '1';
-                    section.style.transform = 'translateY(0)';
-                }, 500 + (index * 300));
-            });
-        });
-        
-        // Эффект при наведении на ссылки
-        const links = document.querySelectorAll('.link');
-        links.forEach(link => {
-            link.addEventListener('mouseenter', function() {
-                this.style.background = 'linear-gradient(135deg, rgba(255,255,255,1), rgba(240,240,240,1))';
-            });
-            
-            link.addEventListener('mouseleave', function() {
-                this.style.background = 'linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,240,240,0.9))';
-            });
-        });
-			</script>
-</body>
+		</div>
 
+		<footer class="footer">
+			<p>© 2025 Дипломная работа Потаповой Полины. Все права защищены.</p>
+		</footer>
+	</div>
+
+	<script>
+		// Анимация появления элементов при загрузке
+		document.addEventListener('DOMContentLoaded', function() {
+			const sections = document.querySelectorAll('.section');
+			const title = document.querySelector('.title');
+			
+			// Анимация заголовка
+			title.style.opacity = '0';
+			title.style.transform = 'translateY(-50px)';
+			
+			setTimeout(() => {
+				title.style.transition = 'opacity 1s ease, transform 1s ease';
+				title.style.opacity = '1';
+				title.style.transform = 'translateY(0)';
+			}, 300);
+			
+			// Анимация секций
+			sections.forEach((section, index) => {
+				section.style.opacity = '0';
+				section.style.transform = 'translateY(30px)';
+				
+				setTimeout(() => {
+					section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+					section.style.opacity = '1';
+					section.style.transform = 'translateY(0)';
+				}, 500 + (index * 300));
+			});
+		});
+		
+		// Эффект при наведении на ссылки
+		const links = document.querySelectorAll('.link');
+		links.forEach(link => {
+			link.addEventListener('mouseenter', function() {
+				this.style.background = 'linear-gradient(135deg, rgba(255,255,255,1), rgba(240,240,240,1))';
+			});
+			
+			link.addEventListener('mouseleave', function() {
+				this.style.background = 'linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,240,240,0.9))';
+			});
+		});
+	</script>
+</body>
 </html>
